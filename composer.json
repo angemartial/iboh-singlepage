@@ -1,0 +1,15 @@
+{
+    "name": "eliket-grp/iboh_single_page",
+    "description": "Iboh Company Website",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "angemartial",
+            "email": "angemartialkoffi@gmail.com"
+        }
+    ],
+    "require": {
+        "swiftmailer/swiftmailer": "^6.0"
+    }
+}

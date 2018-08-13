@@ -25,7 +25,6 @@ header .logo-container h1 {
     font-weight: 900;
     text-shadow: 2px 2px 2px #000;
     color: white;
-
 }
 .swiper-container {
     position: absolute;
@@ -38,7 +37,6 @@ header .logo-container h1 {
 }
 .logo-container {
     display: inline-block;
-    text-align: left;
 }
 .swiper-slide {
     height: 100vh;
@@ -86,14 +84,29 @@ header .logo-container h1 {
     margin-top: 100vh;
     background-color: #f9f9f9;
     min-height: 100vh;
+    padding-bottom: 1rem;
+}
+#informatique h4 {
+    color: black;
+    text-align:center;
+    padding: 2rem;
+    padding-top: 0.1rem;
+}
+#informatique p{
+    font-size: 1.3rem;
 }
 section > h2 {
     padding: 3rem 0;
     font-weight: 300;
     text-align: center;
 }
+#immobilier {
+    background-color: #f9f9f9;
+
+}
 .colonne > h2 {
     text-align: center;
+    color: black;
 }
 section > h2 em {
     font-style: normal;
@@ -139,6 +152,7 @@ a:hover {
     margin: auto auto 1rem;
     font-size: 6rem;
 }
+
 ul.row {
     justify-content: space-between;
     flex-wrap: wrap;
@@ -149,17 +163,22 @@ ul.row {
 #crypto-monnaie {
     height: 100vh;
     overflow: hidden;
-    background-color: rgb(255, 162, 0);
+    background-color:white;
 }
 #crypto-monnaie > .container-fluid {
     height: 100%;
     padding: 0;
 }
-#crypto-monnaie > .container-fluid > div {
+#crypto-monnaie > .container-fluid > div  {
     height: 100%;
     position: relative;
     overflow: hidden;
     float: left;
+    background-color: white;
+
+}
+#crypto-monnaie > .container-fluid > div h2 {
+color: black;
 }
 .crypto-img {
     height: 100%;
@@ -169,8 +188,18 @@ ul.row {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-#crypto-monnaie h2 {
+.qui-sommes-img {
+    height: 50%;
+    width: 80%;
+    position:relative;
+}
+#qui-sommes-nous h2 {
     color: white;
+    padding: 1rem;
+    text-align: center;
+}
+#crypto-monnaie h2 {
+    color: black;
     padding: 1rem;
     text-align: center;
 }
@@ -185,11 +214,23 @@ nav ul li a, nav ul li a:hover {
     text-decoration: none;
 }
 #import-export {
-    min-height: 100vh;
+    min-height: 106vh;
     overflow: hidden;
     position: relative;
     background-color: #f9f9f9;
 }
+#import-export  .bulle {
+    color: white;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    line-height: 2;
+    margin: auto auto 1rem;
+    font-size: 6rem;
+}
+
 #import-export > .container-fluid {
     height: 100%;
     padding: 0;
@@ -232,10 +273,10 @@ nav ul li a, nav ul li a:hover {
 #immobilier .bulle {
     margin: initial;
     overflow: hidden;
-    width: 18rem;
-    height: 18rem;
-    position: absolute;
-    top: 50%;
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
     border: solid 10px rgb(37, 121, 0);
@@ -249,8 +290,10 @@ nav ul li a, nav ul li a:hover {
     transform: translate(-50%,-50%);
 }
 .immo-services {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-top: 4rem;
+
 }
 .plus-info {
     text-align: right;
@@ -259,12 +302,13 @@ nav ul li a, nav ul li a:hover {
     font-weight: bold;
 }
 #import-export .colonnes .colonne {
-    height: 25rem;
+    height: 30rem;
     background-color: rgba(255, 162, 0, 0.8);
     padding: 2rem;
+    padding-bottom: 2rem;
 }
 #import-export .colonnes .colonne p {
-    text-align: justify;
+    text-align: center;
 }
 #import-export .colonnes .colonne h3 {
     text-align: center;
@@ -318,7 +362,7 @@ nav ul li a, nav ul li a:hover {
     position: absolute;
     color: white;
     padding: 1rem;
-    height: 18rem;
+    height: 11rem;
     max-width: 100%;
     background-color: rgb(37, 121, 0);
     top: 1rem;
@@ -339,4 +383,54 @@ footer {
 }
 a:hover {
     text-decoration: none;
+}
+#stick-header.fixed-header {
+    position: fixed;
+    background-color: rgba(0,0,0,0.8);
+    padding: 0;
+    z-index: 1000;
+}
+#stick-header.fixed-header .logo {
+    margin: 0.5rem;
+}
+
+.nav-hamburger {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    line-height: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    display: none !important;
+}
+header nav{
+    display: block !important;
+}
+@media only screen and (max-width: 600px) {
+    header nav{
+        display: none;
+        width: 100%;
+        background-color: rgba(0,0,0,1);
+    }
+    header nav ul{
+        padding: 0;
+        width: 100%;
+    }
+    header nav ul li{
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    header nav ul li a{
+        display: block;
+        margin: 0;
+        padding: 0 1rem;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .nav-hamburger{
+        display: none;
+    }
 }
