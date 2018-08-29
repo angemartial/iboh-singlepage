@@ -1,15 +1,29 @@
 body{
     font-family: 'Exo', sans-serif;
 }
-header {
+#stick-header.fixed-header .top_border {
+    display: none;
+}
+#stick-header.fixed-header .container-fluid.space-top{
+    margin: 0;
+}
+.fixed-header nav ul {
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+}
+#contactez-nous > .row {
     padding: 1rem;
+    margin: 0;
+}
+header {
     border-bottom: dotted 1px #ddd;
-    color: white;
+    color: black;
     line-height: 3;
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
+    background-color: white;
 }
 
 header nav, header nav ul, header nav ul li {
@@ -41,6 +55,7 @@ header .logo-container h1 {
 .swiper-slide {
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 .swiper-slide > img {
     width: 100%;
@@ -81,7 +96,6 @@ header .logo-container h1 {
     font-size: 2rem;
 }
 #informatique {
-    margin-top: 100vh;
     background-color: #f9f9f9;
     min-height: 100vh;
     padding-bottom: 1rem;
@@ -103,6 +117,14 @@ section > h2 {
 #immobilier {
     background-color: #f9f9f9;
 
+}
+.container-fluid.top_border {
+    font-size: small;
+    color: orange;
+    border-bottom: inset;
+}
+.container-fluid.space-top {
+    margin-top: 1rem;
 }
 .colonne > h2 {
     text-align: center;
@@ -161,16 +183,14 @@ ul.row {
     text-align: center;
 }
 #crypto-monnaie {
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden;
-    background-color:white;
+    background-color: white;
 }
 #crypto-monnaie > .container-fluid {
-    height: 100%;
     padding: 0;
 }
 #crypto-monnaie > .container-fluid > div  {
-    height: 100%;
     position: relative;
     overflow: hidden;
     float: left;
@@ -181,12 +201,35 @@ ul.row {
 color: black;
 }
 .crypto-img {
-    height: 100%;
-    width: auto;
-    left: 50%;
+    width: 100%;
     position: absolute;
+    height: auto;
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+.crypto-img-back {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    border: solid 0.5rem rgb(255, 162, 0);
+}
+.crypto-img-container, .crypto-img-back {
+    width: 90%;
+    height: 20rem;
+}
+.crypto-left{
+    padding: 1rem;
+}
+.crypto-img-container {
+
+    overflow: hidden;
+    margin-left: 3rem;
+    margin-top: 3rem;
+    background: url('../img/bank-bitcoin-blockchain-315785.jpg') center;
+    background-size: cover;
+    position: relative;
+    border: solid 1rem rgb(255, 162, 0);
 }
 .qui-sommes-img {
     height: 50%;
@@ -206,6 +249,7 @@ color: black;
 section#immobilier {
     overflow: hidden;
     position: relative;
+    margin-top: 100vh;
 }
 
 
@@ -271,14 +315,14 @@ nav ul li a, nav ul li a:hover {
     text-align: center;
 }
 #immobilier .bulle {
-    margin: initial;
     overflow: hidden;
     width: 15rem;
     height: 15rem;
+    margin: 1rem 1rem 2rem;
     position: relative;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    /* top: 30%; */
+    /* left: 50%; */
+    /* transform: translate(-50%,-50%); */
     border: solid 10px rgb(37, 121, 0);
 }
 
@@ -296,13 +340,13 @@ nav ul li a, nav ul li a:hover {
 
 }
 .plus-info {
-    text-align: right;
+    text-align: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
     font-weight: bold;
+
 }
 #import-export .colonnes .colonne {
-    height: 30rem;
     background-color: rgba(255, 162, 0, 0.8);
     padding: 2rem;
     padding-bottom: 2rem;
@@ -348,8 +392,9 @@ nav ul li a, nav ul li a:hover {
 #contactez-nous iframe {
     width: 100%;
     height: 20rem;
-    float: left;
+
 }
+
 .clearfix {
     clear: both;
 }
@@ -358,15 +403,12 @@ nav ul li a, nav ul li a:hover {
     position: relative;
 }
 .contact-infos {
-    width: 25rem;
-    position: absolute;
     color: white;
     padding: 1rem;
-    height: 11rem;
-    max-width: 100%;
+    align-self: baseline;
+    display: block;
+    height: auto;
     background-color: rgb(37, 121, 0);
-    top: 1rem;
-    left: 1rem;
 }
 #contactez-nous form {
     margin-bottom: 2rem;
@@ -375,11 +417,35 @@ nav ul li a, nav ul li a:hover {
     margin: auto;
     display: block;
 }
+.plus-info a, .square-btn {
+    color: white;
+    background-color: rgb(255, 162, 0);
+    font-weight: normal;
+    padding: 1rem;
+    min-width: 10rem;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-box-shadow: 10px 10px 0px 1px rgba(255,162,0,0.5);
+    -moz-box-shadow: 10px 10px 0px 1px rgba(255,162,0,0.5);
+    box-shadow: 10px 10px 0px 1px rgba(255,162,0,0.5);
+}
+.button-container{
+    text-align: center;
+}
+
 footer {
     text-align: right;
     padding: 1rem;
     background-color: black;
     color: white;
+}
+.top-most-bar span {
+    margin-left: 2rem;
+    display: inline-block;
+}
+.top-most-bar {
+    text-align: right;
 }
 a:hover {
     text-decoration: none;
@@ -389,6 +455,7 @@ a:hover {
     background-color: rgba(0,0,0,0.8);
     padding: 0;
     z-index: 1000;
+    color: white;
 }
 #stick-header.fixed-header .logo {
     margin: 0.5rem;
@@ -402,16 +469,21 @@ a:hover {
     line-height: 1rem;
     display: inline-block;
     cursor: pointer;
-    display: none !important;
 }
-header nav{
-    display: block !important;
+@media screen and (orientation: portrait) {
+    .swiper-slide > img{
+        height: 100%;
+        width: auto;
+    }
 }
+
 @media only screen and (max-width: 600px) {
     header nav{
         display: none;
         width: 100%;
         background-color: rgba(0,0,0,1);
+        color: white;
+        text-align: center;
     }
     header nav ul{
         padding: 0;
@@ -428,9 +500,32 @@ header nav{
         margin: 0;
         padding: 0 1rem;
     }
-}
-@media only screen and (min-width: 600px) {
-    .nav-hamburger{
+    .top-most-bar{
         display: none;
     }
+    nav .top-most-bar{
+        display: block;
+        text-align: left;
+    }
+    nav .top-most-bar span{
+        margin: 0;
+    }
+    .swiper-slide .caption{
+        width: 80%;
+    }
+    .swiper-slide .caption h2{
+        font-size: 2rem;
+    }
+    .swiper-slide .caption h3 {
+        font-size: 1.25rem;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .nav-hamburger, nav .top-most-bar{
+        display: none;
+    }
+    header nav{
+        display: block !important;
+    }
+
 }

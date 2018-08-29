@@ -33,6 +33,10 @@ $(document).ready(function () {
     force.config( { moveEasing: 'easeOutBack' } );
     //force.bindHashes();
 
+    $(document).on('click', '.nav-hamburger', function (e) {
+        $('header nav').slideToggle();
+    });
+
     $(document).on('click', 'header nav li a', function (e) {
         e.preventDefault();
         var target = $(e.currentTarget),
