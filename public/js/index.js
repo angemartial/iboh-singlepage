@@ -7,10 +7,10 @@ $(document).ready(function () {
         // Optional parameters
         loop: true,
         autoplay: {
-            delay: 7000,
-            autoplay: true
+            delay: 0,
+            autoplay: false
         },
-        speed: 5000,
+        speed: 0,
         // If we need pagination
         pagination: {
             el: '.swiper-pagination'
